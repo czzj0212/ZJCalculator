@@ -115,6 +115,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 entity.name = dic["name"] as! String?
                 entity.code = dic["code"] as! String?
                 entity.firstCharactor = self.getFirstCharactor(chineseString: entity.name)
+                if entity.code == "USD"{
+                    
+                    entity.exchangeRate = 1.0
+                }
                 self.saveContext()
             }
         }

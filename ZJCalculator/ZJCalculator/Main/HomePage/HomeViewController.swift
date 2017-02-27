@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray
 
-        self.title = "极简计算器"
+        self.title = "ZJ计算器"
         for i:Int in 0 ..< 1 {
         
             let x = CGFloat(i/3)*calButtonWidth
@@ -38,10 +38,10 @@ class HomeViewController: UIViewController {
 
         let buttonRect = CGRect(x: x, y: y, width: calButtonWidth, height:calButtonHeight)
     
-        let button = UIButton.init(frame: buttonRect)
+        let button = HomeButton.init(frame: buttonRect)
         button.layer.borderWidth = 0.5
         button.layer.borderColor = UIColor.black.cgColor
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.setTitle(title, for: .normal)
         button.setImage(UIImage.init(named: imageNmae), for: .normal)
         button.addTarget(self, action: #selector(calButtonAction(calButton:)), for: .touchUpInside)

@@ -25,6 +25,11 @@ class ExchangeManager: NSObject {
             
             self.refreshExchangeRate()
         }
+        self.calculateIndex = 0
+        let model : CurrencyModel = dataSource[calculateIndex] as! CurrencyModel
+        calculateCurPrice = model.exchangeRate
+        calculateSumString = "1"
+
     }
     
     var dataSource : Array<Any?> = []
@@ -171,12 +176,13 @@ class ExchangeManager: NSObject {
                     let nowDateString = formatter.string(from: Date.init())
                     UserDefaults.standard.set(nowDateString, forKey: kDataUpdateTimeUserdefaultKey)
                     do{
-                        let userList = try appDelegate.persistentContainer.viewContext.fetch(request) as! [CurrencyModel] as NSArray
-                        if userList.count != 0 {
-                            let user = userList[0] as! CurrencyModel
-                            user.exchangeRate = Float(price)!
+                        let currencyArr = try appDelegate.persistentContainer.viewContext.fetch(request) as! [CurrencyModel] as NSArray
+                        if currencyArr.count != 0 {
+                            let currency = currencyArr[0] as! CurrencyModel
+                     
+                            currency.exchangeRate = Float(price)!
                             try appDelegate.persistentContainer.viewContext.save()
-                            print("修改成功 ~ ~")
+                            print("修改成功 ~ ~"+currency.code!)
                         }else{
                             print("修改失败，没有符合条件的货币！")
                         }

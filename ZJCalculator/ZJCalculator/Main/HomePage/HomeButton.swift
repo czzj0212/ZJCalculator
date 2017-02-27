@@ -30,15 +30,18 @@ class HomeButton: UIButton {
     override func imageRect(forContentRect contentRect: CGRect) -> CGRect {
         
         let imageW : CGFloat = contentRect.width/2.0
-        let rect : CGRect = CGRect.init(x: 0, y: 0, width: imageW, height: imageW)
+
+        let x = (contentRect.width - imageW)/2.0
+        let rect : CGRect = CGRect.init(x: x, y:contentRect.height/4.0, width: imageW, height: imageW)
         
         return rect
     }
     
     override func titleRect(forContentRect contentRect: CGRect) -> CGRect {
-        let imageW : CGFloat = contentRect.width/2.0
-
-        let rect : CGRect = CGRect.init(x: 0, y: imageW+20, width: imageW, height: contentRect.height-20-imageW);
+        let imageRect : CGRect = (self.imageView?.frame)!
+        let y = imageRect.maxY + 20
+        
+        let rect : CGRect = CGRect.init(x: 0, y: y, width: contentRect.width, height: 20);
         return rect
     }
 }

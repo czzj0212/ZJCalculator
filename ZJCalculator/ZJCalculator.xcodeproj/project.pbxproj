@@ -466,9 +466,9 @@
 			isa = PBXGroup;
 			children = (
 				9DAD583E1E64275A004E5F24 /* ClassLib */,
-				9DAD584E1E64275A004E5F24 /* ExchangeRate */,
-				9DAD585A1E64275A004E5F24 /* HomePage */,
 				9DAD58601E64275A004E5F24 /* InstrumentClass */,
+				9DAD585A1E64275A004E5F24 /* HomePage */,
+				9DAD584E1E64275A004E5F24 /* ExchangeRate */,
 				9DAD58631E64275A004E5F24 /* Pictures */,
 			);
 			path = Main;
@@ -495,8 +495,8 @@
 		9DAD584F1E64275A004E5F24 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9DAD58501E64275A004E5F24 /* CurrencyListViewController.swift */,
 				9DAD58511E64275A004E5F24 /* ExchangeRateController.swift */,
+				9DAD58501E64275A004E5F24 /* CurrencyListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1288,6 +1288,7 @@
 				9DAD58361E642733004E5F24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9DAD58371E642733004E5F24 /* Build configuration list for PBXNativeTarget "ZJCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -1296,6 +1297,7 @@
 				9DAD58391E642733004E5F24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9DAD583A1E642733004E5F24 /* Build configuration list for PBXNativeTarget "ZJCalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -1304,6 +1306,7 @@
 				9DAD583C1E642733004E5F24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
